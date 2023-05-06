@@ -1,1 +1,1 @@
-console.log('text log')
+console.log('wow')

@@ -2,6 +2,7 @@ body{
   background-color: aqua;
 }
 
+
 *,
 *::before,
 *::after {
@@ -28,10 +29,10 @@ body {
 .flex-item:not(:first-of-type) {
   margin: 10px 0 0
 }
-.sidebar {
+/* .sidebar {
   border: 1px solid black;
   height: 500px;
-}
+} */
 
 /* ----------
 Column styling
@@ -39,6 +40,7 @@ Column styling
 
 #profile{
   width: 20%;
+
   border: black 1px solid;
 }
 

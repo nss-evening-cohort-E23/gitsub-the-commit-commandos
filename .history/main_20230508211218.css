@@ -58,9 +58,9 @@ footer {
   background: rgb(60, 66, 70);
   background: rgb(224, 215, 215);
 }
-.footer ul{
-  display: flex;
-  }
+/* .footer ul{
+  display: inline-block;
+  } */
 .footerLinks ul li {
     display: inline-block;
 }

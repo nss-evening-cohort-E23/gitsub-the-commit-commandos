@@ -50,25 +50,3 @@ Column styling
   border-radius: 100px;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  background: rgb(60, 66, 70);
-  background: rgb(224, 215, 215);
-}
-.footer ul{
-  display: flex;
-  }
-.footerLinks ul li {
-    display: inline-block;
-}
-
-.footerLinks {
-    float:inline-start;
-}
-
-.copyright {
-    float: left;
-}

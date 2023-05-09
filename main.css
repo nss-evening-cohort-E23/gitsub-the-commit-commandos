@@ -1,3 +1,17 @@
 body{
   background-color: aqua;
 }
+
+/* ----------
+Column styling
+---------- */
+
+#profile{
+  width: 20%;
+}
+
+#avatar{
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}

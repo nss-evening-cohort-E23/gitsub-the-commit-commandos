@@ -72,3 +72,7 @@ footer {
 .copyright {
     float: left;
 }
+
+.btn-container{
+  border: black 1px solid;
+}

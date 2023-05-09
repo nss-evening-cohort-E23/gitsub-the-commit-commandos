@@ -32,3 +32,18 @@ body {
   border: 1px solid black;
   height: 500px;
 }
+
+/* ----------
+Column styling
+---------- */
+
+#profile{
+  width: 20%;
+  border: black 1px solid;
+}
+
+#avatar{
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}

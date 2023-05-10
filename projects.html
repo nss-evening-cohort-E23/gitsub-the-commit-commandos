@@ -44,13 +44,19 @@
 
         <a class="btn btn-primary" href="index.html" role="button">Overview</a>
         <a class="btn btn-primary" href="repositories.html" role="button">Repositories</a>
-        <a class="btn btn-primary" href="projects.html" role="button">Projects</a>
-        <a class="btn btn-primary" href="#" role="Packages">Packages</a>
+        <a class="btn btn-primary" href="#" role="button">Projects</a>
+        <a class="btn btn-primary" href="Packages.html" role="Packages">Packages</a>
       
 
       </nav>
       <div class="flex-item" id="Projects">
-        <h1 class="project-board">Project Board</h1>
+        <form id="form" role="search">
+          <input type="search" id="query" name="q"
+           placeholder="Search..."
+           aria-label="Search through site content">
+          <button>Search</button>
+        </form>
+        
         <p>Projects</p>
 
 <ul>

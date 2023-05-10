@@ -1,0 +1,30 @@
+body{
+  background-color: aqua;
+}
+/* .copyright {
+  text-align: center;
+} */
+
+.footerLinks {
+  display: flex ;
+	background: #333333;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: arial;
+}
+.footerLinks ul {
+	padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+.footerLinks li {
+	display: inline;
+}
+.footerLinks a {
+	color: #d9d9d9;
+	text-decoration: none;
+	font-size: 13px;
+}

@@ -51,7 +51,7 @@ Column styling
   border-radius: 100px;
 }
 
-.footer {
+footer {
   /* position: absolute; */
   /* bottom: 0; */
   width: 100%;
@@ -85,17 +85,17 @@ Column styling
   padding: 3%;
 }
 
-.button {
+button {
   width: 20%;
 }
 
 /* **** PROJECT BOARD STYLING **** */
-/* #projectBoard {
+#projectBoard {
   /* margin-left: 5%; */
   /* width: 100%; */
- */
+}
 
-.projects {
+.project-board {
   margin-left: 1.5%;
   color: white;
 }
@@ -124,3 +124,5 @@ Column styling
   margin-bottom: 5%;
   height: auto;
 }
+
+/* style="margin-left: 10px; height: 30px" */

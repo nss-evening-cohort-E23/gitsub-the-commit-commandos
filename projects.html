@@ -42,15 +42,32 @@
     <div class="fl">
       <nav class="btn-container">
 
+        <a class="btn btn-primary" href="index.html" role="button">Overview</a>
+        <a class="btn btn-primary" href="repositories.html" role="button">Repositories</a>
+        <a class="btn btn-primary" href="projects.html" role="button">Projects</a>
+        <a class="btn btn-primary" href="#" role="Packages">Packages</a>
+      
+
+      </nav>
+      <div class="flex-item" id="Projects">
+        <h1 class="project-board">Project Board</h1>
+        <p>Projects</p>
+
+<ul>
+    <li>example1</li>
+    <li>example2</li>
+    <li>example3</li>
+    
+</ul>
       </div>
       <div class="flex-item" id="createNewProject">
-        <h1 class="form-title">Create a New Project</h1>
+        <h1 class="form-title">Add a new package</h1>
         <form>
           <div class="mb-3">
             <div>
-              <label class="text-area-labels" for="projectName" class="form-name">Project Board Name:</label>
+              <label class="text-area-labels" for="projectName" class="form-name">Package Name:</label>
             </div>
-            <textarea class="text-area" rows="1" cols="30" placeholder="Please enter a project name.."></textarea>
+            <textarea class="text-area" rows="1" cols="30" placeholder="Please enter a package name.."></textarea>
             </div>
           <div class="mb-3">
             <div>
@@ -58,7 +75,7 @@
             </div>
             <textarea class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="createProjectButton">Create Project</button>
+          <button type="submit" class="btn btn-primary" id="createProjectButton">Create Package</button>
         </form>
       </div>
       <footer>

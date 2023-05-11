@@ -25,7 +25,7 @@ body {
 }
 .flex-item {
   border: 1px solid black;
-  height: 50%;
+  /* height: 50%; */
 }
 .flex-item:not(:first-of-type) {
   margin: 2% 0 0;
@@ -121,4 +121,34 @@ button {
   height: auto;
 }
 
-/* style="margin-left: 10px; height: 30px" */
+#renderedProjectCards {
+  display: flex;
+  justify-content: space-evenly;
+  /* height: 75%; */
+  /* width: 33%; */
+}
+
+.card-body {
+  border: 2px solid black;
+  height: 75%;
+  background-color: white;
+}
+
+.btn-warning {
+  width: 10rem;
+  font-weight: bold;
+}
+
+#renderedProjectCards {
+  display: flex;
+  flex-flow: wrap row;
+}
+
+.overview-card {
+  width: 31%;
+  margin: 1%;
+  /* margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  margin-left: 1%;
+  margin-right: 1%; */
+}

@@ -13,7 +13,7 @@ const projects= [{
 {
   id: 3,
   projName:"Sample My Goals",
-  description: "No description",
+  description: "Goals for NSS Bootcamp.",
 
 },
 ]
@@ -26,13 +26,42 @@ const renderToDom = (divId, htmlToRender) => {
 const cardsOnDom = (array) =>{
   let domString ="";
 for (const project of array){ 
-  domString += `<div class="card" id="user-card" style="width: 18rem;" >
+  domString += `<div class="card" id="user-card" style="width: 50rem;" >
         
       <div class="body">
-      <h5 class="card-title">House: ${project.projName}</h5>
+      <h5 class="card-title">${project.projName}</h5>
       <p class= "card-txt">${project.description}</p>
       </div>
      </div>`
 }
-  renderToDom ('#Projects', domString);
+  renderToDom ('#projectCard', domString);
 }
+cardsOnDom(projects);
+
+
+const createProject = (e) => {
+  console.log("called");
+  e.preventDefault();
+
+     const newProjObject ={
+     id: projects.length +1,
+     projName: document.querySelector('#projectName').value,
+     description: document.querySelector('#description').value,
+     }
+     console.log(newProjObject)
+      projects.push(newProjObject);
+ cardsOnDom(projects);
+ projForm.reset();
+    }
+
+    
+   const startApp = () => {
+    cardsOnDom(projects);
+    
+  }
+
+  const projectForm = document.querySelector("#projForm");
+
+projectForm.addEventListener("submit", createProject)
+alert("click");
+  

@@ -122,6 +122,8 @@ const createProject = (e) => {
 
 const projectForm = document.querySelector("#overviewForm");
 const packForm = document.querySelector("#packageForm");
+// const placeHolder = document.querySelector("#placeHolder"); place holder for laura or thomas
+// const placeHolder = document.querySelector("#placeHoler"); place holder for laura or thomas
 const startApp= ()=>{
   document.addEventListener('DOMContentLoaded', function() {
     cardsOnDom(cards)
@@ -133,6 +135,14 @@ const startApp= ()=>{
     renderPackages()
     packForm.addEventListener("submit", createPackage)
   }
+// }if (document.URL.includes("placeHolder")) { place holder for laura or thomas
+//   placeHolder()
+//   packForm.addEventListener("submit", placeHolder)
+// }
+// }if (document.URL.includes("placeHolder")) { place holder for laura or thomas
+//   placeHolder()
+//   packForm.addEventListener("submit", placeHolder)
+// }
 }
 
 startApp()

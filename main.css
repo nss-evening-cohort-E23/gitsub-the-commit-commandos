@@ -25,7 +25,6 @@ body {
 }
 .flex-item {
   border: 1px solid black;
-  height: 50%;
 }
 .flex-item:not(:first-of-type) {
   margin: 2% 0 0;
@@ -122,3 +121,22 @@ button {
 }
 
 /* style="margin-left: 10px; height: 30px" */
+
+
+/* Repo board styling */
+
+#repo-list{
+  background-color: rgba(0,0,0,0.1);
+  width: 100%;
+  
+}
+
+.list-group-item{
+  background-color: transparent;
+}
+
+.repo-fav{
+  position: absolute;
+  right: 0;
+  top: 20%;
+}

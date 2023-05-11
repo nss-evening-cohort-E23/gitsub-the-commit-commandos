@@ -48,26 +48,30 @@
         <a class="btn btn-primary" href="packages.html" role="button">Packages</a>
 
       </nav>
-      <div class="flex-item" id="projectBoard">
-        <h1 class="project-board">Project Board</h1>
-        <p class="project-board">Location to render project board cards.</p>
+      <div class="flex-item" id="repo-board">
+        <h1 class="project-board"></h1>
+        <div id='repo-list'  class="card">
+          <ul id="repos" class="list-group list-group-flush">
+            
+          </ul>
+        </div>
       </div>
       <div class="flex-item" id="createNewProject">
         <h1 class="form-title">Create a New Repository</h1>
-        <form>
+        <form id="repo-form">
           <div class="mb-3">
             <div>
               <label class="text-area-labels" for="projectName" class="form-name">Repository Name:</label>
             </div>
-            <textarea class="text-area" rows="1" cols="30" placeholder="Please enter a project name.."></textarea>
+            <textarea id="repo-name" class="text-area" rows="1" cols="30" placeholder="Please enter a repository name.."></textarea>
             </div>
           <div class="mb-3">
             <div>
               <label class="text-area-labels" for="description" class="form-description">Description below:</label>
             </div>
-            <textarea class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
+            <textarea id="repo-desc" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="createProjectButton">Create Repository</button>
+          <button type="submit" id="create-repo" class="btn btn-primary" >Create Repository</button>
         </form>
       </div>
       <footer>
@@ -102,6 +106,6 @@
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-  <script src="main.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>

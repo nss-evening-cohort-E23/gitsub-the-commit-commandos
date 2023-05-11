@@ -25,7 +25,6 @@ body {
 }
 .flex-item {
   border: 1px solid black;
-  height: 50%;
 }
 .flex-item:not(:first-of-type) {
   margin: 2% 0 0;
@@ -122,3 +121,14 @@ button {
 }
 
 /* style="margin-left: 10px; height: 30px" */
+
+#packagesContainer{
+  display: flex ;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.packages-cards{
+  width: 31%;
+  margin: 1%;
+}

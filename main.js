@@ -23,7 +23,7 @@ const renderToDom = (divId, htmlToRender) => {
   selectedDiv.innerHTML = htmlToRender;
 };
 
-const cardsOnDom = (array) =>{
+const cardsDom = (array) =>{
   let domString ="";
 for (const project of array){ 
   domString += `<div class="card" id="user-card" style="width: 50rem;" >
@@ -36,7 +36,7 @@ for (const project of array){
 }
   renderToDom ('#projectCard', domString);
 }
-cardsOnDom(projects);
+cardsDom(projects);
 
 
 const createProject = (e) => {
@@ -49,7 +49,7 @@ const createProject = (e) => {
      }
      
       projects.push(newProjObject);
-      cardsOnDom(projects);
+      cardsDom(projects);
       projForm.reset();
     }
 

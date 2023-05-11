@@ -49,26 +49,26 @@
       
 
       </nav>
-      <div class="flex-item" id="projectBoard">
-        <h1 class="project-board">Project Board</h1>
-        <p class="project-board">Location to render project board cards.</p>
+      <div class="flex-item">
+        <h1 class="container-title">Projects</h1>
+        <div id="packagesContainer"></div>
       </div>
       <div class="flex-item" id="createNewProject">
         <h1 class="form-title">Add a new package</h1>
-        <form>
+        <form id="packageForm">
           <div class="mb-3">
             <div>
               <label class="text-area-labels" for="projectName" class="form-name">Package Name:</label>
             </div>
-            <textarea class="text-area" rows="1" cols="30" placeholder="Please enter a package name.."></textarea>
+            <textarea id="packageTitle" class="text-area" rows="1" cols="30" placeholder="Please enter a package name.."></textarea>
             </div>
           <div class="mb-3">
             <div>
               <label class="text-area-labels" for="description" class="form-description">Description below:</label>
             </div>
-            <textarea class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
+            <textarea id="packageDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="createProjectButton">Create Package</button>
+          <button type="submit" class="btn btn-primary" id="createPackageBtn">Create Package</button>
         </form>
       </div>
       <footer>

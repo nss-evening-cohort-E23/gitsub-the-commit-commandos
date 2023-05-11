@@ -62,7 +62,7 @@ const createProject = (e) => {
   const projectForm = document.querySelector("#projForm");
 
 projectForm.addEventListener("submit", createProject)
-alert("click");
+
 
 //LAURA'S FUNCTION END
   

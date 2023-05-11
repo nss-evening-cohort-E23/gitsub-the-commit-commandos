@@ -1,4 +1,4 @@
-
+//LAURA'S FUNCTION START
 
 const projects= [{
   id: 1,
@@ -63,4 +63,6 @@ const createProject = (e) => {
 
 projectForm.addEventListener("submit", createProject)
 alert("click");
+
+//LAURA'S FUNCTION END
   

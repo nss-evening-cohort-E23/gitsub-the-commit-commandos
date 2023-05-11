@@ -105,33 +105,36 @@ const cardsOnDom = (array) => {
   }
   renderToDom("#renderedProjectCards", domString);
 };
-
+// cardsOnDom(cards)
 const createProject = (e) => {
   e.preventDefault();
   const newProject = {
     id: cards.length +1,
-    name: document.querySelector("#overviewProjectName").value,
-    description: document.querySelector("#overviewProjectDescription").value,
+    title: document.querySelector("#overviewProjectName").value,
+    description: document.querySelector("#overviewProjectDescription").value
   }
   cards.unshift(newProject);
   cardsOnDom(cards);
   overviewForm.reset();
 };
 
+
+
+const projectForm = document.querySelector("#overviewForm");
+const packForm = document.querySelector("#packageForm");
 const startApp= ()=>{
-  renderPackages()
-  cardsOnDom(cards)
+  document.addEventListener('DOMContentLoaded', function() {
+    cardsOnDom(cards)
+ }, false);
+  if (document.URL.includes("index.html")) {
+    cardsOnDom(cards)
+    projectForm.addEventListener('submit', createProject)
+  }if (document.URL.includes("packages.html")) {
+    renderPackages()
+    packForm.addEventListener("submit", createPackage)
+  }
 }
 
 startApp()
-
-const packForm = document.querySelector("#packageForm");
-
-packForm.addEventListener("submit", createPackage)
-
-const projectForm = document.querySelector("#overviewForm");
-
-projectForm.addEventListener('submit', createProject)
-  // console.log("Form Button is Working");
 
   

@@ -40,18 +40,17 @@ cardsOnDom(projects);
 
 
 const createProject = (e) => {
-  console.log("called");
-  e.preventDefault();
+    e.preventDefault();
 
      const newProjObject ={
      id: projects.length +1,
      projName: document.querySelector('#projectName').value,
      description: document.querySelector('#description').value,
      }
-     console.log(newProjObject)
+     
       projects.push(newProjObject);
- cardsOnDom(projects);
- projForm.reset();
+      cardsOnDom(projects);
+      projForm.reset();
     }
 
     

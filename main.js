@@ -55,7 +55,7 @@ const createProject = (e) => {
 
     
    const startApp = () => {
-    cardsOnDom(projects);
+    projectDom(projects);
     
   }
 

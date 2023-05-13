@@ -139,7 +139,7 @@ const rendRepo = function(){
   }
   let domStringForm=`
   <h1>Create Repo</h1>
-    <form id="formRepo">
+    <form id="form1">
       <div class="mb-3">
             <div>
               <label class="text-area-labels" for="projectName" class="form-name">Repo Name:</label>
@@ -152,7 +152,7 @@ const rendRepo = function(){
             </div>
             <textarea id="description" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="repo--Btn">Create Repo</button>
+          <button type="submit" class="btn btn-primary" id="repo">Create Repo</button>
     </form>`
   renderToDom("#formContainer", domStringForm)
   renderToDom('#cardContainer', domString);
@@ -191,7 +191,7 @@ for (const project of data[2].info){
 }
 let domStringForm=`
   <h1>Create Project</h1>
-    <form id="formProject">
+    <form id="form1">
       <div class="mb-3">
             <div>
               <label class="text-area-labels" for="projectName" class="form-name">Project Name:</label>
@@ -204,7 +204,7 @@ let domStringForm=`
             </div>
             <textarea id="description" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="project--Btn">Create Project</button>
+          <button type="submit" class="btn btn-primary" id="project">Create Project</button>
     </form>`
   renderToDom("#formContainer", domStringForm)
   renderToDom ('#cardContainer', domString);
@@ -241,7 +241,7 @@ const renderPackages = () =>{
   });
   let domStringForm=`
   <h1>Add Package</h1>
-    <form id="formPackage">
+    <form id="form1">
       <div class="mb-3">
             <div>
               <label class="text-area-labels" for="projectName" class="form-name">Package Name:</label>
@@ -254,7 +254,7 @@ const renderPackages = () =>{
             </div>
             <textarea id="description" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="package--Btn">Add Package</button>
+          <button type="submit" class="btn btn-primary" id="package">Add Package</button>
     </form>`
   renderToDom("#formContainer", domStringForm)
   renderToDom("#cardContainer",domString)
@@ -290,7 +290,7 @@ const cardsOnDom = () => {
   }
   let domStringForm=`
   <h1>Pin Repo</h1>
-    <form id="formPin">
+    <form id="form1">
       <div class="mb-3">
             <div>
               <label class="text-area-labels" for="projectName" class="form-name">Repo Name:</label>
@@ -303,7 +303,7 @@ const cardsOnDom = () => {
             </div>
             <textarea id="description" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="pin--Btn">Create Pin</button>
+          <button type="submit" class="btn btn-primary" id="pin">Create Pin</button>
     </form>`
   
   renderToDom("#formContainer", domStringForm)
@@ -359,7 +359,7 @@ repoBtn.addEventListener("click",() =>{ filter("repo")})
 projectBtn.addEventListener("click",() =>{ filter("project")})
 packageBtn.addEventListener("click",() =>{ filter("package")})
 
-const formBtn = document.querySelector.includes("form")
+const form = document.querySelector("#form1")
 // const pinForm=document.querySelector("#formPin")
 // const repoForm=document.querySelector("#formRepo")
 // const projectForm=document.querySelector("#formProject")
@@ -371,31 +371,31 @@ const formBtn = document.querySelector.includes("form")
 // packageForm.addEventListener("submit",renderPackages)
 
 
-// form.addEventListener("submit", (e)=>{
-//   e.preventDefault()
+form.addEventListener("submit", (e)=>{
+  e.preventDefault()
+  console.log(e.submitter.id);
 
-//   console.log(e.target.id);
-//   switch (e.target.id) {
-//     case "formPin":
-//       console.log("pin");
-//       break;
+  switch (e.submitter.id) {
+    case "pin":
+      console.log("pin");
+      break;
   
-//     case "formRepo":
-//       console.log("repo");
-//       break;
+    case "repo":
+      console.log("repo");
+      break;
       
-//     case "formProject":
-//       console.log("project");
-//       break;
+    case "project":
+      console.log("project");
+      break;
   
-//     case "formPackage":
-//       console.log("package");
-//       break;
-//     default:
-//       console.log("case is not working");
-//     break;
-//   }
-// })
+    case "package":
+      console.log("package");
+      break;
+    default:
+      console.log("case is not working");
+    break;
+  }
+})
 
 
   

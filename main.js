@@ -1,4 +1,7 @@
-//LAURA'S FUNCTION START
+// import { repoList } from "./scripts/repo-list.js";
+// import { repoDisplay } from "./scripts/repo-list.js";
+
+//LAURA'S ARRAY BELOW
 
 const projects= [{
   id: 1,
@@ -17,6 +20,35 @@ const projects= [{
 
 },
 ]
+
+//THOMAS' ARRAY
+const repoList = [
+  {
+    id: 1,
+    name: 'Cat Naming Project',
+    desc: 'Project that will generate a cat name based on a series of inputs',
+    tags: ['javascript', 'html', 'css', 'netlify'],
+  },
+  {
+    id: 2,
+    name: 'Spin Around Project',
+    desc: 'This website takes another website and turns it upside down',
+    tags: ['funny', 'javascript', 'html', 'web-modification'],
+  },
+  {
+    id: 3,
+    name: 'Word Counter',
+    desc: "It's on the box. Counts words bro.",
+    tags: ['counting', 'javascript', 'practical'],
+  },
+  {
+    id: 4,
+    name: 'Book Review Site',
+    desc: 'Website that aggregates book reviews from several websites and give a rating',
+    tags: ['books', 'website', 'javascript'],
+  }
+]
+
 
 // MASON'S ARRAY BELOW ****
 let packages = [
@@ -70,14 +102,59 @@ let cards = [
     description: "Code database for various pre-made ready-to-use functional code block.",
   }
 ];
-console.log(cards);
 
-// MASONS FUNCTION BELOW ****
+
 // Function that will add items on the page.
 const renderToDom = (divId, htmlToRender) => {
   const selectedDiv = document.querySelector(divId);
   selectedDiv.innerHTML = htmlToRender;
 };
+
+
+//THOMAS' CARD
+const repoDisplay = function (obj){ return `
+  <li class="list-group-item">
+  <h3 class="repo-title">${obj.name}</h3>
+  <p class="repo-desc">${obj.desc}</p>
+  <h5 class="repo-tags">${obj.tags}</h5>
+  <button class="repo-fav">* Star</button>
+  </li>
+  `
+
+}
+
+
+//THOMAS' FUNCTIONS BELOW
+const rendRepo = function(){
+  let domString = '';
+
+  for (let item of repoList){
+    domString += repoDisplay(item);
+  }
+
+  renderToDom('#repos', domString);
+}
+
+
+
+
+const addRepo = function (e){
+  e.preventDefault();
+
+  let newRepo = {
+    id: repoList +1,
+    name: document.querySelector('#repo-name').value,
+    desc: document.querySelector('#repo-desc').value,
+    tags: [],
+  }
+
+  repoList.push(newRepo);
+  rendRepo();
+  form.reset();
+}
+
+
+
 
 const projectDom = (array) =>{
   let domString ="";
@@ -94,7 +171,7 @@ for (const project of array){
 }
 
 
-
+//LAURA'S FUNCTION BELOW
 const createProject = (e) => {
     e.preventDefault();
 
@@ -116,14 +193,16 @@ const createProject = (e) => {
 
 
 //LAURA'S FUNCTION END
+
+// MASONS FUNCTION BELOW ****
 const renderPackages = () =>{
   let domString=""
-  packages.forEach(package => {
+  packages.forEach(item => {
     domString+=`
     <div class="card packages-cards";">
       <div class="card-body">
-        <h5 class="card-title">${package.name}</h5>
-        <p class="card-text">${package.description}</p>
+        <h5 class="card-title">${item.name}</h5>
+        <p class="card-text">${item.description}</p>
         <a href="#" class="btn btn-primary">More info</a>
       </div>
     </div>`
@@ -175,12 +254,10 @@ const createPin = (e) => {
   overviewForm.reset();
 };
 
-
+const form = document.querySelector('#repo-form')
 const projectForm = document.querySelector("#projForm");
 const overviewForm = document.querySelector("#overviewForm");
 const packForm = document.querySelector("#packageForm");
-// const placeHolder = document.querySelector("#placeHolder"); place holder for laura or thomas
-// const placeHolder = document.querySelector("#placeHoler"); place holder for laura or thomas
 const startApp= ()=>{
   document.addEventListener('DOMContentLoaded', function() {
     cardsOnDom(cards)
@@ -194,13 +271,16 @@ const startApp= ()=>{
     packForm.addEventListener("submit", createPackage)
   }
   if (document.URL.includes("projects.html")) { 
-projectDom(projects);
-projectForm.addEventListener("submit", createProject)
- }}
-// }if (document.URL.includes("placeHolder")) { place holder for laura or thomas
-//   placeHolder()
-//   packForm.addEventListener("submit", placeHolder)
-// 
+  projectDom(projects);
+  projectForm.addEventListener("submit", createProject)
+ }
+ if (document.URL.includes("repositories.html")) {
+  rendRepo();
+  form.addEventListener('submit', addRepo);
+ }
+
+
+}
 
 
 startApp()

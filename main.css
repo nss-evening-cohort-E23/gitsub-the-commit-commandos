@@ -115,6 +115,27 @@ button {
   height: auto;
 }
 
+/* style="margin-left: 10px; height: 30px" */
+
+
+/* Repo board styling */
+
+#repo-list{
+  background-color: rgba(0,0,0,0.1);
+  width: 100%;
+  
+}
+
+.list-group-item{
+  background-color: transparent;
+}
+
+.repo-fav{
+  position: absolute;
+  right: 0;
+  top: 20%;
+}
+
 #renderedProjectCards {
   display: flex;
   justify-content: space-evenly;

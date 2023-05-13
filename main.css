@@ -51,12 +51,8 @@ Column styling
 }
 
 footer {
-  /* position: absolute; */
-  /* bottom: 0; */
   width: 100%;
   height: 40px;
-  /* margin-left: 5%; */
-  /* margin-right: 5%; */
   background: rgb(60, 66, 70);
   background: rgb(224, 215, 215);
 }
@@ -78,7 +74,6 @@ footer {
 .btn-container {
   display: inline-flex;
   justify-content: space-around;
-  /* flex-wrap: wrap: */
   border: black 1px solid;
   margin-top: 5%;
   padding: 3%;
@@ -120,7 +115,31 @@ button {
   height: auto;
 }
 
-/* style="margin-left: 10px; height: 30px" */
+#renderedProjectCards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-body {
+  border: 2px solid black;
+  height: 75%;
+  background-color: white;
+}
+
+.btn-warning {
+  width: 10rem;
+  font-weight: bold;
+}
+
+#renderedProjectCards {
+  display: flex;
+  flex-flow: wrap row;
+}
+
+.overview-card {
+  width: 31%;
+  margin: 1%;
+}
 
 #packagesContainer{
   display: flex ;

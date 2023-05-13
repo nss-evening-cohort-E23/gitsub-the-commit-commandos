@@ -1,3 +1,4 @@
+// MASON'S ARRAY BELOW ****
 let packages = [
   {
     id:1,
@@ -31,7 +32,27 @@ let packages = [
   }
 ];
 
+// DAVIDS ARRAY BELOW ******
+let cards = [
+  {
+    id: 1,
+    title: "The Commit Commanders",
+    description: "Commanding code since April 2023.",
+  },
+  {
+    id: 2,
+    title: "Code Blaster",
+    description: "Create, write, and edit code seamlessly through voice.",
+  },
+  {
+    id: 3,
+    title: "Code Junkie",
+    description: "Code database for various pre-made ready-to-use functional code block.",
+  }
+];
+console.log(cards);
 
+// MASONS FUNCTION BELOW ****
 // Function that will add items on the page.
 const renderToDom = (divId, htmlToRender) => {
   const selectedDiv = document.querySelector(divId);
@@ -68,12 +89,62 @@ const createPackage = (e) =>{
   packForm.reset()
 }
 
+// DAVIDS FUNCTION BELOW ****
+
+const cardsOnDom = (array) => {
+  let domString = "";
+  for (const cards of array) {
+    domString += `
+  <div class="overview-card card">
+    <div class="card-body">
+      <h5 class="card-title">${cards.title}</h5>
+      <p class="card-text">${cards.description}</p>
+      <button class="btn btn-warning" id="delete--${cards.id}">Remove Project</button>
+    </div>
+  </div>`;
+  }
+  renderToDom("#renderedProjectCards", domString);
+};
+// cardsOnDom(cards)
+const createProject = (e) => {
+  e.preventDefault();
+  const newProject = {
+    id: cards.length +1,
+    title: document.querySelector("#overviewProjectName").value,
+    description: document.querySelector("#overviewProjectDescription").value
+  }
+  cards.unshift(newProject);
+  cardsOnDom(cards);
+  overviewForm.reset();
+};
+
+
+
+const projectForm = document.querySelector("#overviewForm");
+const packForm = document.querySelector("#packageForm");
+// const placeHolder = document.querySelector("#placeHolder"); place holder for laura or thomas
+// const placeHolder = document.querySelector("#placeHoler"); place holder for laura or thomas
 const startApp= ()=>{
-  renderPackages()
+  document.addEventListener('DOMContentLoaded', function() {
+    cardsOnDom(cards)
+ }, false);
+  if (document.URL.includes("index.html")) {
+    cardsOnDom(cards)
+    projectForm.addEventListener('submit', createProject)
+  }if (document.URL.includes("packages.html")) {
+    renderPackages()
+    packForm.addEventListener("submit", createPackage)
+  }
+// }if (document.URL.includes("placeHolder")) { place holder for laura or thomas
+//   placeHolder()
+//   packForm.addEventListener("submit", placeHolder)
+// }
+// }if (document.URL.includes("placeHolder")) { place holder for laura or thomas
+//   placeHolder()
+//   packForm.addEventListener("submit", placeHolder)
+// }
 }
 
 startApp()
 
-const packForm = document.querySelector("#packageForm");
-
-packForm.addEventListener("submit", createPackage)
+  

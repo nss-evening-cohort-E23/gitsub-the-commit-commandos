@@ -25,7 +25,6 @@ body {
 }
 .flex-item {
   border: 1px solid black;
-  height: 50%;
 }
 .flex-item:not(:first-of-type) {
   margin: 2% 0 0;
@@ -51,13 +50,9 @@ Column styling
   border-radius: 100px;
 }
 
-.footer {
-  /* position: absolute; */
-  /* bottom: 0; */
+footer {
   width: 100%;
   height: 40px;
-  /* margin-left: 5%; */
-  /* margin-right: 5%; */
   background: rgb(60, 66, 70);
   background: rgb(224, 215, 215);
 }
@@ -79,23 +74,18 @@ Column styling
 .btn-container {
   display: inline-flex;
   justify-content: space-around;
-  /* flex-wrap: wrap: */
   border: black 1px solid;
   margin-top: 5%;
   padding: 3%;
 }
 
-.button {
+button {
   width: 20%;
 }
 
 /* **** PROJECT BOARD STYLING **** */
-/* #projectBoard {
-  /* margin-left: 5%; */
-  /* width: 100%; */
- */
 
-.projects {
+.project-board {
   margin-left: 1.5%;
   color: white;
 }
@@ -123,4 +113,41 @@ Column styling
   margin-left: 2%;
   margin-bottom: 5%;
   height: auto;
+}
+
+#renderedProjectCards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-body {
+  border: 2px solid black;
+  height: 75%;
+  background-color: white;
+}
+
+.btn-warning {
+  width: 10rem;
+  font-weight: bold;
+}
+
+#renderedProjectCards {
+  display: flex;
+  flex-flow: wrap row;
+}
+
+.overview-card {
+  width: 31%;
+  margin: 1%;
+}
+
+#packagesContainer{
+  display: flex ;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.packages-cards{
+  width: 31%;
+  margin: 1%;
 }

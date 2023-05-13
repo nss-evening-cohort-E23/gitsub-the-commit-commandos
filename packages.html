@@ -42,32 +42,33 @@
     <div class="fl">
       <nav class="btn-container">
 
-        <a class="btn btn-primary" href="" role="button">Overview</a>
+        <a class="btn btn-primary" href="index.html" role="button">Overview</a>
         <a class="btn btn-primary" href="repositories.html" role="button">Repositories</a>
         <a class="btn btn-primary" href="projects.html" role="button">Projects</a>
-        <a class="btn btn-primary" href="packages.html" role="button">Packages</a>
+        <a class="btn btn-primary" href="#" role="Packages">Packages</a>
+      
 
       </nav>
-      <div class="flex-item" id="projectBoard">
-        <h1 class="project-board">Pinned</h1>
-        <div id="renderedProjectCards"></div>
+      <div class="flex-item">
+        <h1 class="container-title">Projects</h1>
+        <div id="packagesContainer"></div>
       </div>
       <div class="flex-item">
-        <h1 class="form-title">Create a New Project</h1>
-        <form id="overviewForm">
+        <h1 class="form-title">Add a new package</h1>
+        <form id="packageForm">
           <div class="mb-3">
             <div>
-              <label class="text-area-labels" for="projectName" class="form-name">Project Board Name:</label>
+              <label class="text-area-labels" for="projectName" class="form-name">Package Name:</label>
             </div>
-            <textarea id="overviewProjectName" class="text-area" rows="1" cols="30" placeholder="Please enter a project name.."></textarea>
+            <textarea id="packageTitle" class="text-area" rows="1" cols="30" placeholder="Please enter a package name.."></textarea>
             </div>
           <div class="mb-3">
             <div>
               <label class="text-area-labels" for="description" class="form-description">Description below:</label>
             </div>
-            <textarea id="overviewProjectDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
+            <textarea id="packageDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="createProjectButton">Create Project</button>
+          <button type="submit" class="btn btn-primary" id="createPackageBtn">Create Package</button>
         </form>
       </div>
       <footer>

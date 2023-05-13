@@ -1,5 +1,6 @@
 body{
-  background-color: rgb(165, 165, 165);
+  background-color: #5a6773;
+  color: white;
 }
 
 *,
@@ -42,13 +43,63 @@ Column styling
   width: 20%;
   border: black 1px solid;
   margin: 5%;
+  padding: 4px;
 }
 
 #avatar{
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  display: block;
+  border: 1px solid black;
   border-radius: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
 }
+
+#profile-name{
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#username{
+  font-size: 15px;
+  margin-top: -10px;
+}
+
+#profile-bio{
+  font-size: 12px;
+}
+
+#follower-row{
+  font-size: 10px;
+}
+
+#profile-btnrow{
+  font-size: 10px;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.user-btn{
+  padding: 2px 5px 2px 5px;
+  border-radius: 8px;
+  background-color: #49535d;
+  color: white;
+  margin-bottom: 3px;
+}
+
+#social-info{
+  font-size: 12px;
+}
+
+#social-list{
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+/* ------------ */
 
 footer {
   width: 100%;

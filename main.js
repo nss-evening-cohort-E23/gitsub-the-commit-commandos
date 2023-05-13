@@ -1,3 +1,23 @@
+//LAURA'S FUNCTION START
+
+const projects= [{
+  id: 1,
+  projName:"Example-1",
+  description: "No description",
+},
+{
+  id: 2,
+  projName:"my-goals",
+  description: "No description",
+},
+{
+  id: 3,
+  projName:"Sample My Goals",
+  description: "Goals for NSS Bootcamp.",
+
+},
+]
+
 // MASON'S ARRAY BELOW ****
 let packages = [
   {
@@ -59,6 +79,43 @@ const renderToDom = (divId, htmlToRender) => {
   selectedDiv.innerHTML = htmlToRender;
 };
 
+const projectDom = (array) =>{
+  let domString ="";
+for (const project of array){ 
+  domString += `<div class="card" id="user-card" style="width: 50rem;" >
+        
+      <div class="body">
+      <h5 class="card-title">${project.projName}</h5>
+      <p class= "card-txt">${project.description}</p>
+      </div>
+     </div>`
+}
+  renderToDom ('#projectCard', domString);
+}
+
+
+
+const createProject = (e) => {
+    e.preventDefault();
+
+     const newProjObject ={
+     id: projects.length +1,
+     projName: document.querySelector('#projectName').value,
+     description: document.querySelector('#description').value,
+     }
+     
+      projects.push(newProjObject);
+      projectDom(projects);
+      projForm.reset();
+    }
+
+    
+     
+
+
+
+
+//LAURA'S FUNCTION END
 const renderPackages = () =>{
   let domString=""
   packages.forEach(package => {
@@ -106,7 +163,7 @@ const cardsOnDom = (array) => {
   renderToDom("#renderedProjectCards", domString);
 };
 // cardsOnDom(cards)
-const createProject = (e) => {
+const createPin = (e) => {
   e.preventDefault();
   const newProject = {
     id: cards.length +1,
@@ -119,8 +176,8 @@ const createProject = (e) => {
 };
 
 
-
-const projectForm = document.querySelector("#overviewForm");
+const projectForm = document.querySelector("#projForm");
+const overviewForm = document.querySelector("#overviewForm");
 const packForm = document.querySelector("#packageForm");
 // const placeHolder = document.querySelector("#placeHolder"); place holder for laura or thomas
 // const placeHolder = document.querySelector("#placeHoler"); place holder for laura or thomas
@@ -130,20 +187,21 @@ const startApp= ()=>{
  }, false);
   if (document.URL.includes("index.html")) {
     cardsOnDom(cards)
-    projectForm.addEventListener('submit', createProject)
-  }if (document.URL.includes("packages.html")) {
+    overviewForm.addEventListener('submit', createPin)
+  }
+  if (document.URL.includes("packages.html")) {
     renderPackages()
     packForm.addEventListener("submit", createPackage)
   }
+  if (document.URL.includes("projects.html")) { 
+projectDom(projects);
+projectForm.addEventListener("submit", createProject)
+ }}
 // }if (document.URL.includes("placeHolder")) { place holder for laura or thomas
 //   placeHolder()
 //   packForm.addEventListener("submit", placeHolder)
-// }
-// }if (document.URL.includes("placeHolder")) { place holder for laura or thomas
-//   placeHolder()
-//   packForm.addEventListener("submit", placeHolder)
-// }
-}
+// 
+
 
 startApp()
 

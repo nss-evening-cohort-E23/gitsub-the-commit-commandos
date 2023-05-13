@@ -88,7 +88,7 @@ let packages = [
 let cards = [
   {
     id: 1,
-    title: "The Commit Commanders",
+    title: "The Commit Commandos",
     description: "Commanding code since April 2023.",
   },
   {
@@ -235,7 +235,7 @@ const cardsOnDom = (array) => {
     <div class="card-body">
       <h5 class="card-title">${cards.title}</h5>
       <p class="card-text">${cards.description}</p>
-      <button class="btn btn-warning" id="delete--${cards.id}">Remove Project</button>
+      <a href="#" class="btn btn-danger" id="delete--${cards.id}">Remove</a>
     </div>
   </div>`;
   }
@@ -253,6 +253,18 @@ const createPin = (e) => {
   cardsOnDom(cards);
   overviewForm.reset();
 };
+
+// OVERVIEW DELETE FUNCTION - breaks all other page renders ***
+// const deletePin = document.querySelector("#renderedProjectCards");
+// deletePin.addEventListener('click', (e) => {
+//   if (e.target.id.includes("delete")) {
+//     const [, id] = e.target.id.split("--");
+//     const index = cards.findIndex(card => card.id ===Number(id));
+//     console.log("index", index);
+//     cards.splice(index, 1)
+//     cardsOnDom(cards);
+//   }
+// })
 
 const form = document.querySelector('#repo-form')
 const projectForm = document.querySelector("#projForm");

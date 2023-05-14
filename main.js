@@ -139,18 +139,18 @@ const rendRepo = function(){
   }
   let domStringForm=`
   <h1>Create Repo</h1>
-    <form id="form1">
+    <form id="formRepo">
       <div class="mb-3">
             <div>
               <label class="text-area-labels" for="projectName" class="form-name">Repo Name:</label>
             </div>
-            <textarea id="title" class="text-area" rows="1" cols="30" placeholder="Please enter a repo name.."></textarea>
+            <textarea id="repoTitle" class="text-area" rows="1" cols="30" placeholder="Please enter a repo name.."></textarea>
             </div>
           <div class="mb-3">
             <div>
               <label class="text-area-labels" for="description" class="form-description">Description below:</label>
             </div>
-            <textarea id="description" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
+            <textarea id="repoDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
           <button type="submit" class="btn btn-primary" id="repo">Create Repo</button>
     </form>`
@@ -160,19 +160,19 @@ const rendRepo = function(){
 
 
 
-const addRepo = function (e){
-  e.preventDefault();
+const addRepo = function (){
+
 
   let newRepo = {
     id: data[1].info +1,
-    name: document.querySelector('#title').value,
-    desc: document.querySelector('#description').value,
+    name: document.querySelector('#repoTitle').value,
+    desc: document.querySelector('#repoDescription').value,
     tags: [],
   }
 
   data[1].info.push(newRepo);
   rendRepo();
-  form.reset();
+  repoForm.reset();
 }
 
 
@@ -191,18 +191,18 @@ for (const project of data[2].info){
 }
 let domStringForm=`
   <h1>Create Project</h1>
-    <form id="form1">
+    <form id="formProject">
       <div class="mb-3">
             <div>
               <label class="text-area-labels" for="projectName" class="form-name">Project Name:</label>
             </div>
-            <textarea id="title" class="text-area" rows="1" cols="30" placeholder="Please enter a Project name.."></textarea>
+            <textarea id="projectTitle" class="text-area" rows="1" cols="30" placeholder="Please enter a Project name.."></textarea>
             </div>
           <div class="mb-3">
             <div>
               <label class="text-area-labels" for="description" class="form-description">Description below:</label>
             </div>
-            <textarea id="description" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
+            <textarea id="projectDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
           <button type="submit" class="btn btn-primary" id="project">Create Project</button>
     </form>`
@@ -210,18 +210,17 @@ let domStringForm=`
   renderToDom ('#cardContainer', domString);
 }
 
-const createProject = (e) => {
-    e.preventDefault();
+const createProject = () => {
 
      const newProjObject ={
      id: data[2].info.length +1,
-     projName: document.querySelector('#title').value,
-     description: document.querySelector('#description').value,
+     projName: document.querySelector('#projectTitle').value,
+     description: document.querySelector('#projectDescription').value
      }
-     
+     console.log(newProjObject);
       data[2].info.push(newProjObject);
       projectDom();
-      form.reset();
+      projectForm.reset();
     }
 //LAURA'S FUNCTION END
 
@@ -241,18 +240,18 @@ const renderPackages = () =>{
   });
   let domStringForm=`
   <h1>Add Package</h1>
-    <form id="form1">
+    <form id="formPackage">
       <div class="mb-3">
             <div>
               <label class="text-area-labels" for="projectName" class="form-name">Package Name:</label>
             </div>
-            <textarea id="title" class="text-area" rows="1" cols="30" placeholder="Please enter a package name.."></textarea>
+            <textarea id="packageTitle" class="text-area" rows="1" cols="30" placeholder="Please enter a package name.."></textarea>
             </div>
           <div class="mb-3">
             <div>
               <label class="text-area-labels" for="description" class="form-description">Description below:</label>
             </div>
-            <textarea id="description" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
+            <textarea id="packageDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
           <button type="submit" class="btn btn-primary" id="package">Add Package</button>
     </form>`
@@ -260,18 +259,17 @@ const renderPackages = () =>{
   renderToDom("#cardContainer",domString)
 }
 
-const createPackage = (e) =>{
+const createPackage = () =>{
   console.log("createpack fun is called");
-  e.preventDefault();
 
   const newPackageObj = {
     id:data[3].info.length+1,
-    name:document.querySelector("#title").value,
-    description:document.querySelector("#description").value
+    name:document.querySelector("#packageTitle").value,
+    description:document.querySelector("#packageDescription").value
   }
   data[3].info.push(newPackageObj);
   renderPackages();
-  form.reset()
+  packageForm.reset();
 }
 
 // DAVIDS FUNCTION BELOW ****
@@ -288,60 +286,64 @@ const cardsOnDom = () => {
     </div>
   </div>`;
   }
-  let domStringForm=`
+  let domStringFrom =`
   <h1>Pin Repo</h1>
-    <form id="form1">
+    <form id="formPin">
       <div class="mb-3">
             <div>
               <label class="text-area-labels" for="projectName" class="form-name">Repo Name:</label>
             </div>
-            <textarea id="title" class="text-area" rows="1" cols="30" placeholder="Please enter a repo name.."></textarea>
+            <textarea id="pinTitle" class="text-area" rows="1" cols="30" placeholder="Please enter a repo name.."></textarea>
             </div>
           <div class="mb-3">
             <div>
               <label class="text-area-labels" for="description" class="form-description">Description below:</label>
             </div>
-            <textarea id="description" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
+            <textarea id="pinDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
           <button type="submit" class="btn btn-primary" id="pin">Create Pin</button>
     </form>`
-  
-  renderToDom("#formContainer", domStringForm)
+    renderToDom("#formContainer", domStringFrom)
   renderToDom("#cardContainer", domString);
 };
 
-const createPin = (e) => {
-  e.preventDefault();
+const createPin = () => {
+  
+  
   const newProject = {
     id: data[0].info.length +1,
-    title: document.querySelector("#title").value,
-    description: document.querySelector("#description").value
+    title: document.querySelector("#pinTitle").value,
+    description: document.querySelector("#pinDescription").value
   }
   data[0].info.unshift(newProject);
   cardsOnDom();
-  form.reset();
+  pinForm.reset();
 };
+
 
 const filter = (catagory)=>{
   switch (catagory) {
     case "pinned":
       cardsOnDom()
+      
       break;
   
     case "repo":
       rendRepo()
+      
       break;
 
     case "project":
       projectDom()
+      
       break;
   
     case "package":
       renderPackages()
+      
       break;
   }
 }
-
 
 const startApp = () => {
   cardsOnDom()
@@ -354,48 +356,33 @@ const repoBtn = document.querySelector("#reposBtn")
 const projectBtn = document.querySelector("#projectsBtn")
 const packageBtn = document.querySelector("#packagesBtn")
 
+const pinForm=document.querySelector("#formPin")
+const repoForm=document.querySelector("#formRepo")
+const projectForm=document.querySelector("#formProject")
+const packageForm=document.querySelector("#formPackage")
+
+const pinDiv= document.querySelector("#pinDiv")
+const repoDiv= document.querySelector("#repoDiv")
+const projectDiv= document.querySelector("#projectDiv")
+const packageDiv= document.querySelector("#packageDiv")
+const body = document.querySelector("body")
+
+
 pinBtn.addEventListener("click", () =>{filter("pinned")})
 repoBtn.addEventListener("click",() =>{ filter("repo")})
 projectBtn.addEventListener("click",() =>{ filter("project")})
 packageBtn.addEventListener("click",() =>{ filter("package")})
 
-const form = document.querySelector("#form1")
-// const pinForm=document.querySelector("#formPin")
-// const repoForm=document.querySelector("#formRepo")
-// const projectForm=document.querySelector("#formProject")
-// const packageForm=document.querySelector("#formPackage")
-
-// pinForm.addEventListener("submit",createPin)
-// repoForm.addEventListener("submit",addRepo)
-// projectForm.addEventListener("submit",createProject,)
-// packageForm.addEventListener("submit",renderPackages)
-
-
-form.addEventListener("submit", (e)=>{
+body.addEventListener("submit", (e)=>{
   e.preventDefault()
   console.log(e.submitter.id);
-
-  switch (e.submitter.id) {
-    case "pin":
-      console.log("pin");
-      break;
-  
-    case "repo":
-      console.log("repo");
-      break;
-      
-    case "project":
-      console.log("project");
-      break;
-  
-    case "package":
-      console.log("package");
-      break;
-    default:
-      console.log("case is not working");
-    break;
+  if (e.submitter.id === "pin") {
+    createPin()
+  }if (e.submitter.id === "package") {
+    createPackage()
+  }if (e.submitter.id ==="repo") {
+    addRepo()
+  }if (e.submitter.id ==="project") {
+    createProject()
   }
 })
-
-
-  

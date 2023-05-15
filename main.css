@@ -1,35 +1,199 @@
-body{
-  background-color: #5a6773;
+body {
+  background-color: #26292B;
   color: white;
+  /* margin: 0; */
 }
 
+.body {
+  margin-left: 2%;
+}
+
+/* Thomas's Renders */
+.list-group-item {
+  margin-left: 2%;
+  border: 3px solid #2E3239;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  /* margin: 3%; */
+}
+
+/* Laura's Card Renders */
+.card {
+  margin-left: 2%;
+  background-color: #EBF0FD;
+}
+
+.flex-item {
+  border: 1px solid black;
+  border-color: #2E3239;
+  color: #A2B2EE;
+}
+
+#profile{
+  width: 20%;
+  border: black 1px solid;
+  margin: 3%;
+  text-align: center;
+  border-color: #2E3239;
+}
+
+#avatar{
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin-top: 5%;
+}
+
+.user-btn {
+  width: 25%;
+  background-color: #5F7ADB;
+  color: #EBF0FD;
+  border-radius: 30%;
+}
+
+#navbarContainer {
+  border-color: #2E3239;
+}
+.overview-card {
+  width: 31%;
+  margin: 2%;
+  color: black;
+}
+
+#user-card {
+  background-color:#EBF0FD;
+  font-weight: bold;
+}
+
+.btn-warning {
+  width: 10rem;
+  font-weight: bold;
+  background-color: #5F7ADB;
+  color: #EBF0FD;
+}
+
+.repo-fav {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  background-color: #2E3239;
+  color: goldenrod;
+}
+
+#package {
+  margin-left: 2%;
+  margin-bottom: 1%;
+}
+
+.packages-cards {
+  width: 31%;
+  margin: 1%;
+  margin-left: 2%;
+}
+
+.cardContainer {
+  margin-left: 2%;
+}
+
+.card-body {
+  height: 75%;
+  background-color: #EBF0FD;
+}
+
+#projectBoard {
+  border-color: #2E3239;
+}
+
+#cardTitle {
+  color: #A2B2EE;
+  margin-left: 2%;
+}
+
+.text-area-labels {
+  margin-left: 2%;
+  color: #A2B2EE;
+}
+
+textarea {
+  background-color: #EBF0FD;
+}
+
+.mb-3 {
+  border-color: #2E3239;
+}
+
+h1 {
+  margin-left: 2%;
+}
+
+/* Overview Form Submit Button */
+#pin {
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+/* Create Repo Button */
+#repo {
+  margin-left: 2%;
+}
+
+/* Create Project Button */
+#project {
+  margin-left: 2%;
+}
+
+.flex {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+.copyright {
+  background-color: #26292B;
+  margin-left: 2%;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: space-around;
+  background-color: #26292B;
+}
+
+footer {
+  width: 100%;
+  border: 1px solid #2E3239;
+  background-color: #26292B;
+}
+
+
+/* Original div layout template */
 *,
 *::before,
 *::after {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
-body {
-  margin: 0
-}
-.flex {
-  display: flex;
-  flex-basis: 100%;
-}
+
 .fl {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  /* margin: 0 5px; this is the original styling */
+  flex-direction:  column;
+  margin: 0 5px;
   margin-right: 10%;
   width: 90%;
   justify-content: space-between;
+  color: #A2B2EE;
 }
-.flex-item {
-  border: 1px solid black;
-}
-.flex-item:not(:first-of-type) {
+
+/* Not Sure If This is Used */
+/* #flex-item {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+} */
+
+/* .flex-item:not(:first-of-type) {
   margin: 2% 0 0;
-}
+} */
 /* .sidebar {
   border: 1px solid black;
   height: 500px;
@@ -101,12 +265,12 @@ Column styling
 
 /* ------------ */
 
-footer {
+/* footer {
   width: 100%;
   height: 40px;
   background: rgb(60, 66, 70);
   background: rgb(224, 215, 215);
-}
+} */
 .footer ul{
   display: flex;
   }
@@ -151,11 +315,6 @@ button {
   color: white;
 }
 
-.text-area-labels {
-  margin-left: 2%;
-  color: white;
-}
-
 .text-area {
   margin-left: 2%;
 }
@@ -177,49 +336,28 @@ button {
   
 }
 
-.list-group-item{
-  background-color: transparent;
-}
-
-.repo-fav{
-  position: absolute;
-  right: 0;
-  top: 20%;
-}
-
-#renderedProjectCards {
+.flex {
   display: flex;
-  justify-content: space-evenly;
+  flex-basis: 100%;
+  color: #A2B2EE
 }
 
-.card-body {
-  border: 2px solid black;
-  height: 75%;
-  background-color: white;
-}
+/* Not Sure What These Are For */
 
-.btn-warning {
-  width: 10rem;
-  font-weight: bold;
-}
+/* .hide{
+  display: none;
+} */
 
-#renderedProjectCards {
+/* #renderedProjectCards {
   display: flex;
   flex-flow: wrap row;
 }
 
-.overview-card {
-  width: 31%;
-  margin: 1%;
-}
-
-#packagesContainer{
-  display: flex ;
-  flex-flow: row wrap;
+#renderedProjectCards {
+  display: flex;
   justify-content: space-evenly;
-}
+} */
 
-.packages-cards{
-  width: 31%;
-  margin: 1%;
-}
+/* .list-group-item{
+  background-color: transparent;
+} */

@@ -6,7 +6,7 @@ This project simulated a collaborative team work environment allowing the group 
 Wire Frame: https://www.figma.com/file/OCUqhgkolfIlJroNlwQ85I/Mason-Austin's-team-library?type=design&node-id=0-1&t=wj4yKPA9yupPYJmP-0
 
 ### Deployed Project: 
-(https://gitsub-the-commit-commandos.netlify.app/)
+[Netlify Deployment Link](https://gitsub-the-commit-commandos.netlify.app/)
 
 #### Project Board:
 https://github.com/orgs/nss-evening-cohort-E23/projects/4

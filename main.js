@@ -6,7 +6,7 @@ const data = [
       {
         id: 1,
         title: "The Commit Commandos",
-        description: "Commanding code since April 2023.",
+        description: "We have been commanding code since April 2023.",
       },
       {
         id: 2,
@@ -132,7 +132,7 @@ const repoDisplay = function (obj){ return `
 
 // //THOMAS' FUNCTIONS BELOW
 const rendRepo = function(){
-  let domString = `<h1 id="cardTitle" class="project-board">Repositores</h1>`;
+  let domString = `<h1 id="cardTitle" class="project-board">Repositories</h1>`;
 
   for (let item of data[1].info){
     domString += repoDisplay(item);
@@ -284,7 +284,6 @@ const cardsOnDom = () => {
     <div class="card-body">
       <h5 class="card-title">${cards.title}</h5>
       <p class="card-text">${cards.description}</p>
-      <button class="btn btn-warning" id="delete--${cards.id}">Remove Project</button>
     </div>
   </div>`;
   }

@@ -172,7 +172,7 @@ const addRepo = function (){
 
   data[1].info.push(newRepo);
   rendRepo();
-  repoForm.reset();
+  body.reset();
 }
 
 
@@ -220,7 +220,7 @@ const createProject = () => {
      console.log(newProjObject);
       data[2].info.push(newProjObject);
       projectDom();
-      projectForm.reset();
+      body.reset();
     }
 //LAURA'S FUNCTION END
 
@@ -269,7 +269,7 @@ const createPackage = () =>{
   }
   data[3].info.push(newPackageObj);
   renderPackages();
-  packageForm.reset();
+  body.reset();
 }
 
 // DAVIDS FUNCTION BELOW ****
@@ -317,7 +317,7 @@ const createPin = () => {
   }
   data[0].info.unshift(newProject);
   cardsOnDom();
-  pinForm.reset();
+  body.reset();
 };
 
 
@@ -355,16 +355,6 @@ const pinBtn = document.querySelector("#pinnedBtn")
 const repoBtn = document.querySelector("#reposBtn")
 const projectBtn = document.querySelector("#projectsBtn")
 const packageBtn = document.querySelector("#packagesBtn")
-
-const pinForm=document.querySelector("#formPin")
-const repoForm=document.querySelector("#formRepo")
-const projectForm=document.querySelector("#formProject")
-const packageForm=document.querySelector("#formPackage")
-
-const pinDiv= document.querySelector("#pinDiv")
-const repoDiv= document.querySelector("#repoDiv")
-const projectDiv= document.querySelector("#projectDiv")
-const packageDiv= document.querySelector("#packageDiv")
 const body = document.querySelector("body")
 
 

@@ -148,24 +148,6 @@ h1 {
   margin-bottom: 2%;
 }
 
-.copyright {
-  background-color: #26292B;
-  margin-left: 2%;
-}
-
-.footerLinks {
-  display: flex;
-  justify-content: space-around;
-  background-color: #26292B;
-}
-
-footer {
-  width: 100%;
-  border: 1px solid #2E3239;
-  background-color: #26292B;
-}
-
-
 /* Original div layout template */
 *,
 *::before,
@@ -202,21 +184,6 @@ footer {
 /* ----------
 Column styling
 ---------- */
-
-.footer ul{
-  display: flex;
-  }
-.footerLinks ul li {
-    display: inline-block;
-}
-
-.footerLinks {
-    float:inline-start;
-}
-
-.copyright {
-    float: left;
-}
 
 .btn-container {
   display: inline-flex;
@@ -293,3 +260,28 @@ button {
 /* .list-group-item{
   background-color: transparent;
 } */
+
+/* footer styling */
+footer{
+  display: flex;
+  width: 100%;
+}
+
+ ul{
+  width: 100%;
+list-style-type: none;
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-around;
+}
+
+.copyright {
+  background-color: #26292B;
+  margin-left: 2%;
+  width: 10%;
+}
+hr{
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}

@@ -231,6 +231,7 @@ Column styling
 #username{
   font-size: 15px;
   margin-top: -10px;
+  text-align: center;
 }
 
 #profile-bio{
@@ -363,3 +364,11 @@ button {
 /* .list-group-item{
   background-color: transparent;
 } */
+
+
+
+#flexCardContainer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}

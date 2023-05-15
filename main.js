@@ -155,6 +155,7 @@ const rendRepo = function(){
           <button type="submit" class="btn btn-warning" id="repo">Create Repo</button>
     </form>`
   renderToDom("#formContainer", domStringForm)
+  renderToDom("#flexCardContainer", '')
   renderToDom('#cardContainer', domString);
 }
 
@@ -207,6 +208,7 @@ let domStringForm=`
           <button type="submit" class="btn btn-warning" id="project">Create Project</button>
     </form>`
   renderToDom("#formContainer", domStringForm)
+  renderToDom("#flexCardContainer", '')
   renderToDom ('#cardContainer', domString);
 }
 
@@ -256,7 +258,8 @@ const renderPackages = () =>{
           <button type="submit" class="btn btn-warning" id="package">Add Package</button>
     </form>`
   renderToDom("#formContainer", domStringForm)
-  renderToDom("#cardContainer",domString)
+  renderToDom("#cardContainer", '')
+  renderToDom("#flexCardContainer", domString);
 }
 
 const createPackage = () =>{
@@ -303,8 +306,9 @@ const cardsOnDom = () => {
           </div>
           <button type="submit" class="btn btn-warning" id="pin">Create Pin</button>
     </form>`
-    renderToDom("#formContainer", domStringFrom)
-  renderToDom("#cardContainer", domString);
+  renderToDom("#formContainer", domStringFrom)
+  renderToDom("#cardContainer", '')
+  renderToDom("#flexCardContainer", domString);
 };
 
 const createPin = () => {

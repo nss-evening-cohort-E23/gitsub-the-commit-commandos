@@ -29,20 +29,7 @@ body {
   color: #A2B2EE;
 }
 
-/* #profile{
-  width: 20%;
-  border: black 1px solid;
-  margin: 3%;
-  text-align: center;
-  border-color: #2E3239;
-}
 
-#avatar{
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  margin-top: 5%;
-} */
 
 .user-btn {
   width: 25%;
@@ -244,8 +231,8 @@ Column styling
 .user-btn{
   padding: 2px 5px 2px 5px;
   border-radius: 8px;
-  background-color: #49535d;
-  color: white;
+  background-color: #5F7ADB;
+  color: #EBF0FD;
   margin-bottom: 3px;
 }
 

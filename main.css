@@ -29,7 +29,7 @@ body {
   color: #A2B2EE;
 }
 
-#profile{
+/* #profile{
   width: 20%;
   border: black 1px solid;
   margin: 3%;
@@ -42,7 +42,7 @@ body {
   height: 200px;
   border-radius: 100px;
   margin-top: 5%;
-}
+} */
 
 .user-btn {
   width: 25%;
@@ -206,8 +206,9 @@ Column styling
 #profile{
   width: 20%;
   border: black 1px solid;
-  margin: 5%;
+  margin: 3%;
   padding: 4px;
+  border-color: #2E3239;
 }
 
 #avatar{
@@ -220,6 +221,7 @@ Column styling
   margin-left: auto;
   margin-top: 5%;
 }
+
 
 #profile-name{
   text-align: center;

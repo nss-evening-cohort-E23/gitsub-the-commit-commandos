@@ -55,8 +55,8 @@ body {
   border-color: #2E3239;
 }
 .overview-card {
-  width: 31%;
-  margin: 2%;
+  width: 30%;
+  margin: 1%;
   color: black;
 }
 
@@ -86,7 +86,7 @@ body {
 }
 
 .packages-cards {
-  width: 31%;
+  width: 30%;
   margin: 1%;
   margin-left: 2%;
 }
@@ -147,24 +147,6 @@ h1 {
   margin-left: 2%;
   margin-bottom: 2%;
 }
-
-.copyright {
-  background-color: #26292B;
-  margin-left: 2%;
-}
-
-.footerLinks {
-  display: flex;
-  justify-content: space-around;
-  background-color: #26292B;
-}
-
-footer {
-  width: 100%;
-  border: 1px solid #2E3239;
-  background-color: #26292B;
-}
-
 
 /* Original div layout template */
 *,
@@ -242,6 +224,16 @@ Column styling
   font-size: 10px;
 }
 
+#social-info{
+  font-size: 12px;
+}
+
+#social-list{
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+
 #profile-btnrow{
   font-size: 10px;
   display: flex;
@@ -257,14 +249,6 @@ Column styling
   margin-bottom: 3px;
 }
 
-#social-info{
-  font-size: 12px;
-}
-
-#social-list{
-  list-style-type: none;
-  padding-left: 10px;
-}
 
 /* ------------ */
 
@@ -274,20 +258,7 @@ Column styling
   background: rgb(60, 66, 70);
   background: rgb(224, 215, 215);
 } */
-.footer ul{
-  display: flex;
-  }
-.footerLinks ul li {
-    display: inline-block;
-}
 
-.footerLinks {
-    float:inline-start;
-}
-
-.copyright {
-    float: left;
-}
 
 .btn-container {
   display: inline-flex;
@@ -364,6 +335,31 @@ button {
 /* .list-group-item{
   background-color: transparent;
 } */
+
+/* footer styling */
+footer{
+  display: flex;
+  width: 100%;
+}
+
+ #footer-list{
+  width: 100%;
+list-style-type: none;
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-around;
+}
+
+.copyright {
+  background-color: #26292B;
+  margin-left: 2%;
+  width: 10%;
+}
+hr{
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
 
 
 

@@ -1,108 +1,116 @@
-// import { repoList } from "./scripts/repo-list.js";
-// import { repoDisplay } from "./scripts/repo-list.js";
-
-//LAURA'S ARRAY BELOW
-
-const projects= [{
-  id: 1,
-  projName:"Example-1",
-  description: "No description",
-},
-{
-  id: 2,
-  projName:"my-goals",
-  description: "No description",
-},
-{
-  id: 3,
-  projName:"Sample My Goals",
-  description: "Goals for NSS Bootcamp.",
-
-},
-]
-
-//THOMAS' ARRAY
-const repoList = [
+const data = [
   {
-    id: 1,
-    name: 'Cat Naming Project',
-    desc: 'Project that will generate a cat name based on a series of inputs',
-    tags: ['javascript', 'html', 'css', 'netlify'],
+
+    type:"pinned",
+    info: [
+      {
+        id: 1,
+        title: "The Commit Commandos",
+        description: "We have been commanding code since April 2023.",
+      },
+      {
+        id: 2,
+        title: "Code Blaster",
+        description: "Create, write, and edit code seamlessly through voice.",
+      },
+      {
+        id: 3,
+        title: "Code Junkie",
+        description: "Code database for various pre-made ready-to-use functional code block.",
+      }
+    ]
+
   },
   {
-    id: 2,
-    name: 'Spin Around Project',
-    desc: 'This website takes another website and turns it upside down',
-    tags: ['funny', 'javascript', 'html', 'web-modification'],
+
+    type:"repos",
+    info: [
+      {
+        id: 1,
+        name: 'Cat Naming Project',
+        desc: 'Project that will generate a cat name based on a series of inputs',
+        tags: ['javascript', 'html', 'css', 'netlify'],
+      },
+      {
+        id: 2,
+        name: 'Spin Around Project',
+        desc: 'This website takes another website and turns it upside down',
+        tags: ['funny', 'javascript', 'html', 'web-modification'],
+      },
+      {
+        id: 3,
+        name: 'Word Counter',
+        desc: "It's on the box. Counts words bro.",
+        tags: ['counting', 'javascript', 'practical'],
+      },
+      {
+        id: 4,
+        name: 'Book Review Site',
+        desc: 'Website that aggregates book reviews from several websites and give a rating',
+        tags: ['books', 'website', 'javascript'],
+      }
+    ]
   },
   {
-    id: 3,
-    name: 'Word Counter',
-    desc: "It's on the box. Counts words bro.",
-    tags: ['counting', 'javascript', 'practical'],
+
+    type:"projects",
+    info: [{
+      id: 1,
+      projName:"Example-1",
+      description: "No description",
+    },
+    {
+      id: 2,
+      projName:"my-goals",
+      description: "No description",
+    },
+    {
+      id: 3,
+      projName:"Sample My Goals",
+      description: "Goals for NSS Bootcamp.",
+    
+    },
+    ]
+
   },
   {
-    id: 4,
-    name: 'Book Review Site',
-    desc: 'Website that aggregates book reviews from several websites and give a rating',
-    tags: ['books', 'website', 'javascript'],
+
+    type:"packages",
+    info: [
+      {
+        id:1,
+        name:"Docker",
+        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        id:2,
+        name:"Apache Maven",
+        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        id:3,
+        name:"NuGet",
+        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        id:4,
+        name:"RubyGems",
+        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        id:5,
+        name:"npm",
+        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        id:6,
+        name:"Containers",
+        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ]
+
   }
 ]
-
-
-// MASON'S ARRAY BELOW ****
-let packages = [
-  {
-    id:1,
-    name:"Docker",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  },
-  {
-    id:2,
-    name:"Apache Maven",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  },
-  {
-    id:3,
-    name:"NuGet",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  },
-  {
-    id:4,
-    name:"RubyGems",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  },
-  {
-    id:5,
-    name:"npm",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  },
-  {
-    id:6,
-    name:"Containers",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  }
-];
-
-// DAVIDS ARRAY BELOW ******
-let cards = [
-  {
-    id: 1,
-    title: "The Commit Commanders",
-    description: "Commanding code since April 2023.",
-  },
-  {
-    id: 2,
-    title: "Code Blaster",
-    description: "Create, write, and edit code seamlessly through voice.",
-  },
-  {
-    id: 3,
-    title: "Code Junkie",
-    description: "Code database for various pre-made ready-to-use functional code block.",
-  }
-];
-
 
 // Function that will add items on the page.
 const renderToDom = (divId, htmlToRender) => {
@@ -111,55 +119,70 @@ const renderToDom = (divId, htmlToRender) => {
 };
 
 
-//THOMAS' CARD
+// THOMAS' CARD
 const repoDisplay = function (obj){ return `
   <li class="list-group-item">
   <h3 class="repo-title">${obj.name}</h3>
   <p class="repo-desc">${obj.desc}</p>
   <h5 class="repo-tags">${obj.tags}</h5>
-  <button class="repo-fav">* Star</button>
-  </li>
-  `
-
+  <button class="repo-fav">★</button>
+  </li>`
 }
 
 
-//THOMAS' FUNCTIONS BELOW
+// //THOMAS' FUNCTIONS BELOW
 const rendRepo = function(){
-  let domString = '';
+  let domString = `<h1 id="cardTitle" class="project-board">Repositories</h1>`;
 
-  for (let item of repoList){
+  for (let item of data[1].info){
     domString += repoDisplay(item);
   }
-
-  renderToDom('#repos', domString);
+  let domStringForm=`
+  <h1>Create Repo</h1>
+    <form id="formRepo">
+      <div class="mb-3">
+            <div>
+              <label class="text-area-labels" for="projectName" class="form-name">Repo Name:</label>
+            </div>
+            <textarea id="repoTitle" class="text-area" rows="1" cols="30" placeholder="Please enter a repo name.."></textarea>
+            </div>
+          <div class="mb-3">
+            <div>
+              <label class="text-area-labels" for="description" class="form-description">Description below:</label>
+            </div>
+            <textarea id="repoDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
+          </div>
+          <button type="submit" class="formBtn btn btn-warning" id="repo">Create Repo</button>
+    </form>`
+  renderToDom("#formContainer", domStringForm)
+  renderToDom('#cardContainer', domString);
 }
 
 
 
+const addRepo = function (){
 
-const addRepo = function (e){
-  e.preventDefault();
 
   let newRepo = {
-    id: repoList +1,
-    name: document.querySelector('#repo-name').value,
-    desc: document.querySelector('#repo-desc').value,
+    id: data[1].info +1,
+    name: document.querySelector('#repoTitle').value,
+    desc: document.querySelector('#repoDescription').value,
     tags: [],
   }
 
-  repoList.push(newRepo);
+  data[1].info.push(newRepo);
   rendRepo();
-  form.reset();
+  body.reset();
 }
 
 
 
-
-const projectDom = (array) =>{
-  let domString ="";
-for (const project of array){ 
-  domString += `<div class="card" id="user-card" style="width: 50rem;" >
+// //LAURA'S FUNCTION BELOW
+const projectDom = () =>{
+  let domString =`<h1 id="cardTitle" class="project-board">Projects</h1>`
+for (const project of data[2].info){ 
+  domString += `
+  <div class="card" id="user-card">
         
       <div class="body">
       <h5 class="card-title">${project.projName}</h5>
@@ -167,122 +190,191 @@ for (const project of array){
       </div>
      </div>`
 }
-  renderToDom ('#projectCard', domString);
+let domStringForm=`
+  <h1>Create Project</h1>
+    <form id="formProject">
+      <div class="mb-3">
+            <div>
+              <label class="text-area-labels" for="projectName" class="form-name">Project Name:</label>
+            </div>
+            <textarea id="projectTitle" class="text-area" rows="1" cols="30" placeholder="Please enter a Project name.."></textarea>
+            </div>
+          <div class="mb-3">
+            <div>
+              <label class="text-area-labels" for="description" class="form-description">Description below:</label>
+            </div>
+            <textarea id="projectDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
+          </div>
+          <button type="submit" class="formBtn btn btn-warning" id="project">Create Project</button>
+    </form>`
+  renderToDom("#formContainer", domStringForm)
+  renderToDom ('#cardContainer', domString);
 }
 
-
-//LAURA'S FUNCTION BELOW
-const createProject = (e) => {
-    e.preventDefault();
+const createProject = () => {
 
      const newProjObject ={
-     id: projects.length +1,
-     projName: document.querySelector('#projectName').value,
-     description: document.querySelector('#description').value,
+     id: data[2].info.length +1,
+     projName: document.querySelector('#projectTitle').value,
+     description: document.querySelector('#projectDescription').value
      }
-     
-      projects.push(newProjObject);
-      projectDom(projects);
-      projForm.reset();
+     console.log(newProjObject);
+      data[2].info.push(newProjObject);
+      projectDom();
+      body.reset();
     }
-
-    
-     
-
-
-
-
 //LAURA'S FUNCTION END
 
 // MASONS FUNCTION BELOW ****
 const renderPackages = () =>{
-  let domString=""
-  packages.forEach(item => {
+  let domString=`<h1 id="cardTitle" class="project-board">Packages</h1><div class="flex-card">`
+  data[3].info.forEach(item => {
     domString+=`
     <div class="card packages-cards";">
       <div class="card-body">
         <h5 class="card-title">${item.name}</h5>
         <p class="card-text">${item.description}</p>
-        <a href="#" class="btn btn-primary">More info</a>
+        <a href="#" class="btn btn-warning">More info</a>
       </div>
     </div>`
-
+  
   });
-  renderToDom("#packagesContainer",domString)
+  domString+=`</div>`
+  let domStringForm=`
+  <h1>Add Package</h1>
+    <form id="formPackage">
+      <div class="mb-3">
+            <div>
+              <label class="text-area-labels" for="projectName" class="form-name">Package Name:</label>
+            </div>
+            <textarea id="packageTitle" class="text-area" rows="1" cols="30" placeholder="Please enter a package name.."></textarea>
+            </div>
+          <div class="mb-3">
+            <div>
+              <label class="text-area-labels" for="description" class="form-description">Description below:</label>
+            </div>
+            <textarea id="packageDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
+          </div>
+          <button type="submit" class="formBtn btn btn-warning" id="package">Add Package</button>
+    </form>`
+  renderToDom("#formContainer", domStringForm)
+  renderToDom("#cardContainer", domString)
 }
 
-const createPackage = (e) =>{
+const createPackage = () =>{
   console.log("createpack fun is called");
-  e.preventDefault();
 
   const newPackageObj = {
-    id:packages.length+1,
+    id:data[3].info.length+1,
     name:document.querySelector("#packageTitle").value,
     description:document.querySelector("#packageDescription").value
   }
-  packages.push(newPackageObj);
+  data[3].info.push(newPackageObj);
   renderPackages();
-  packForm.reset()
+  body.reset();
 }
 
 // DAVIDS FUNCTION BELOW ****
 
-const cardsOnDom = (array) => {
-  let domString = "";
-  for (const cards of array) {
+const cardsOnDom = () => {
+  let domString = `<h1 id="cardTitle" class="project-board">Pinned</h1><div class="flex-card">`;
+  for (const cards of data[0].info) {
     domString += `
   <div class="overview-card card">
     <div class="card-body">
       <h5 class="card-title">${cards.title}</h5>
       <p class="card-text">${cards.description}</p>
-      <button class="btn btn-warning" id="delete--${cards.id}">Remove Project</button>
     </div>
   </div>`;
   }
-  renderToDom("#renderedProjectCards", domString);
+  domString+=`</div>`
+  let domStringFrom =`
+  <h1>Pin Repo</h1>
+    <form id="formPin">
+      <div class="mb-3">
+            <div>
+              <label class="text-area-labels" for="projectName" id="repoTitle: class="form-name">Repo Name:</label>
+            </div>
+            <textarea id="pinTitle" class="text-area" rows="1" cols="30" placeholder="Please enter a repo name.."></textarea>
+            </div>
+          <div class="mb-3">
+            <div>
+              <label class="text-area-labels" for="description" class="form-description">Description below:</label>
+            </div>
+            <textarea id="pinDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
+          </div>
+          <button type="submit" class="formBtn btn btn-warning" id="pin">Create Pin</button>
+    </form>`
+  renderToDom("#formContainer", domStringFrom)
+  renderToDom("#cardContainer", domString)
 };
-// cardsOnDom(cards)
-const createPin = (e) => {
-  e.preventDefault();
+
+const createPin = () => {
+  
+  
   const newProject = {
-    id: cards.length +1,
-    title: document.querySelector("#overviewProjectName").value,
-    description: document.querySelector("#overviewProjectDescription").value
+    id: data[0].info.length +1,
+    title: document.querySelector("#pinTitle").value,
+    description: document.querySelector("#pinDescription").value
   }
-  cards.unshift(newProject);
-  cardsOnDom(cards);
-  overviewForm.reset();
+  data[0].info.push(newProject);
+  cardsOnDom();
+  body.reset();
 };
 
-const form = document.querySelector('#repo-form')
-const projectForm = document.querySelector("#projForm");
-const overviewForm = document.querySelector("#overviewForm");
-const packForm = document.querySelector("#packageForm");
-const startApp= ()=>{
-  document.addEventListener('DOMContentLoaded', function() {
-    cardsOnDom(cards)
- }, false);
-  if (document.URL.includes("index.html")) {
-    cardsOnDom(cards)
-    overviewForm.addEventListener('submit', createPin)
-  }
-  if (document.URL.includes("packages.html")) {
-    renderPackages()
-    packForm.addEventListener("submit", createPackage)
-  }
-  if (document.URL.includes("projects.html")) { 
-  projectDom(projects);
-  projectForm.addEventListener("submit", createProject)
- }
- if (document.URL.includes("repositories.html")) {
-  rendRepo();
-  form.addEventListener('submit', addRepo);
- }
 
+const filter = (catagory)=>{
+  switch (catagory) {
+    case "pinned":
+      cardsOnDom()
+      
+      break;
+  
+    case "repo":
+      rendRepo()
+      
+      break;
 
+    case "project":
+      projectDom()
+      
+      break;
+  
+    case "package":
+      renderPackages()
+      
+      break;
+  }
 }
 
+const startApp = () => {
+  cardsOnDom()
+}
 
 startApp()
 
-  
+const pinBtn = document.querySelector("#pinnedBtn")
+const repoBtn = document.querySelector("#reposBtn")
+const projectBtn = document.querySelector("#projectsBtn")
+const packageBtn = document.querySelector("#packagesBtn")
+const body = document.querySelector("body")
+
+
+pinBtn.addEventListener("click", () =>{filter("pinned")})
+repoBtn.addEventListener("click",() =>{ filter("repo")})
+projectBtn.addEventListener("click",() =>{ filter("project")})
+packageBtn.addEventListener("click",() =>{ filter("package")})
+
+body.addEventListener("submit", (e)=>{
+  e.preventDefault()
+  console.log(e.submitter.id);
+  if (e.submitter.id === "pin") {
+    createPin()
+  }if (e.submitter.id === "package") {
+    createPackage()
+  }if (e.submitter.id ==="repo") {
+    addRepo()
+  }if (e.submitter.id ==="project") {
+    createProject()
+  }
+})

@@ -1,74 +1,210 @@
-body{
-  background-color: rgb(165, 165, 165);
+body {
+  background-color: #26292B;
+  color: white;
+  /* margin: 0; */
 }
 
+.body {
+  margin-left: 2%;
+}
+
+/* Thomas's Renders */
+.list-group-item {
+  margin-left: 2%;
+  border: 3px solid #2E3239;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  /* margin: 3%; */
+}
+
+/* Laura's Card Renders */
+.card {
+  margin-left: 2%;
+  background-color: #EBF0FD;
+}
+
+.flex-item {
+  border: 1px solid black;
+  border-color: #2E3239;
+  color: #A2B2EE;
+}
+
+
+
+.user-btn {
+  width: 25%;
+  background-color: #5F7ADB;
+  color: #EBF0FD;
+  border-radius: 30%;
+}
+
+#navbarContainer {
+  border-color: #2E3239;
+}
+.overview-card {
+  width: 30%;
+  margin: 1%;
+  color: black;
+}
+
+#user-card {
+  background-color:#EBF0FD;
+  font-weight: bold;
+}
+
+.btn-warning {
+  width: 10rem;
+  font-weight: bold;
+  background-color: #5F7ADB;
+  color: #EBF0FD;
+}
+
+.repo-fav {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  background-color: #2E3239;
+  color: goldenrod;
+}
+
+.packages-cards {
+  width: 30%;
+  margin: 1%;
+  margin-left: 2%;
+}
+
+.cardContainer {
+  margin-left: 2%;
+}
+
+.card-body {
+  height: 75%;
+  background-color: #EBF0FD;
+}
+
+#cardTitle {
+  color: #A2B2EE;
+  margin-left: 2%;
+}
+
+.text-area-labels {
+  margin-left: 2%;
+  color: #A2B2EE;
+}
+
+textarea {
+  background-color: #EBF0FD;
+}
+
+.mb-3 {
+  border-color: #2E3239;
+}
+
+h1 {
+  margin-left: 2%;
+}
+
+/* Form btns styling */
+.formBtn {
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+.flex {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-basis: 100%;
+  color: #A2B2EE;
+}
+
+/* Original div layout template */
 *,
 *::before,
 *::after {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
-body {
-  margin: 0
-}
-.flex {
-  display: flex;
-  flex-basis: 100%;
-}
+
 .fl {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  /* margin: 0 5px; this is the original styling */
+  flex-direction:  column;
+  margin: 0 5px;
   margin-right: 10%;
   width: 90%;
   justify-content: space-between;
+  color: #A2B2EE;
 }
-.flex-item {
-  border: 1px solid black;
-}
-.flex-item:not(:first-of-type) {
-  margin: 2% 0 0;
-}
-/* .sidebar {
-  border: 1px solid black;
-  height: 500px;
-} */
 
 /* ----------
 Column styling
 ---------- */
 
 #profile{
+  height: 100%;
   width: 20%;
   border: black 1px solid;
-  margin: 5%;
+  margin: 3%;
+  padding: 4px;
+  border-color: #2E3239;
 }
 
 #avatar{
   width: 200px;
   height: 200px;
+  display: block;
+  border: 1px solid black;
   border-radius: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
 }
 
-footer {
-  width: 100%;
-  height: 40px;
-  background: rgb(60, 66, 70);
-  background: rgb(224, 215, 215);
+
+#profile-name{
+  text-align: center;
+  margin-bottom: 18px;
 }
-.footer ul{
+
+#username{
+  font-size: 18px;
+  margin-top: -10px;
+  text-align: center;
+}
+
+#profile-bio{
+  font-size: 16px;
+}
+
+#follower-row{
+  font-size: 12px;
+  text-align: center;
+}
+
+#social-info{
+  font-size: 16px;
+}
+
+#social-list{
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+
+#profile-btnrow{
+  font-size: 10px;
   display: flex;
-  }
-.footerLinks ul li {
-    display: inline-block;
+  justify-content: space-around;
+  
 }
 
-.footerLinks {
-    float:inline-start;
-}
-
-.copyright {
-    float: left;
+.user-btn{
+  padding: 2px 5px 2px 5px;
+  border-radius: 8px;
+  background-color: #5F7ADB;
+  color: #EBF0FD;
+  margin-bottom: 3px;
 }
 
 .btn-container {
@@ -76,7 +212,9 @@ footer {
   justify-content: space-around;
   border: black 1px solid;
   margin-top: 5%;
+  margin-bottom: 4%;
   padding: 3%;
+  
 }
 
 button {
@@ -100,11 +238,6 @@ button {
   color: white;
 }
 
-.text-area-labels {
-  margin-left: 2%;
-  color: white;
-}
-
 .text-area {
   margin-left: 2%;
 }
@@ -115,9 +248,6 @@ button {
   height: auto;
 }
 
-/* style="margin-left: 10px; height: 30px" */
-
-
 /* Repo board styling */
 
 #repo-list{
@@ -126,49 +256,32 @@ button {
   
 }
 
-.list-group-item{
-  background-color: transparent;
-}
-
-.repo-fav{
-  position: absolute;
-  right: 0;
-  top: 20%;
-}
-
-#renderedProjectCards {
+footer{
   display: flex;
-  justify-content: space-evenly;
+  width: 100%;
 }
 
-.card-body {
-  border: 2px solid black;
-  height: 75%;
-  background-color: white;
+ #footer-list{
+  width: 100%;
+list-style-type: none;
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-around;
 }
 
-.btn-warning {
-  width: 10rem;
-  font-weight: bold;
+.copyright {
+  background-color: #26292B;
+  margin-left: 2%;
+  width: 10%;
+}
+hr{
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
 }
 
-#renderedProjectCards {
+.flex-card{
   display: flex;
-  flex-flow: wrap row;
-}
-
-.overview-card {
-  width: 31%;
-  margin: 1%;
-}
-
-#packagesContainer{
-  display: flex ;
   flex-flow: row wrap;
   justify-content: space-evenly;
-}
-
-.packages-cards{
-  width: 31%;
-  margin: 1%;
 }

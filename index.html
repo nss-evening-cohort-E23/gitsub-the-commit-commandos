@@ -42,33 +42,20 @@
     <div class="fl">
       <nav class="btn-container">
 
-        <a class="btn btn-primary" href="" role="button">Overview</a>
-        <a class="btn btn-primary" href="repositories.html" role="button">Repositories</a>
-        <a class="btn btn-primary" href="projects.html" role="button">Projects</a>
-        <a class="btn btn-primary" href="packages.html" role="button">Packages</a>
+        <a id="pinnedBtn" class="btn btn-primary" role="button">Overview</a>
+        <a id="reposBtn" class="btn btn-primary"role="button">Repositories</a>
+        <a id="projectsBtn" class="btn btn-primary" role="button">Projects</a>
+        <a id="packagesBtn" class="btn btn-primary" role="button">Packages</a>
 
       </nav>
       <div class="flex-item" id="projectBoard">
         <h1 class="project-board">Pinned</h1>
-        <div id="renderedProjectCards"></div>
+        <div id="cardContainer"></div>
       </div>
       <div class="flex-item">
-        <h1 class="form-title">Create a New Project</h1>
-        <form id="overviewForm">
-          <div class="mb-3">
-            <div>
-              <label class="text-area-labels" for="projectName" class="form-name">Project Board Name:</label>
-            </div>
-            <textarea id="overviewProjectName" class="text-area" rows="1" cols="30" placeholder="Please enter a project name.."></textarea>
-            </div>
-          <div class="mb-3">
-            <div>
-              <label class="text-area-labels" for="description" class="form-description">Description below:</label>
-            </div>
-            <textarea id="overviewProjectDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" id="createProjectButton">Create Project</button>
-        </form>
+
+        <div id="formContainer"></div>
+        
       </div>
       <footer>
         <div class="copyright">
@@ -102,6 +89,6 @@
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-  <script type="module" src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

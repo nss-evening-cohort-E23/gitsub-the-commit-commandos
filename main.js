@@ -6,7 +6,7 @@ const data = [
       {
         id: 1,
         title: "The Commit Commandos",
-        description: "Commanding code since April 2023.",
+        description: "We have been commanding code since April 2023.",
       },
       {
         id: 2,
@@ -132,7 +132,7 @@ const repoDisplay = function (obj){ return `
 
 // //THOMAS' FUNCTIONS BELOW
 const rendRepo = function(){
-  let domString = '';
+  let domString = `<h1 id="cardTitle" class="project-board">Repositories</h1>`;
 
   for (let item of data[1].info){
     domString += repoDisplay(item);
@@ -152,10 +152,9 @@ const rendRepo = function(){
             </div>
             <textarea id="repoDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-warning" id="repo">Create Repo</button>
+          <button type="submit" class="formBtn btn btn-warning" id="repo">Create Repo</button>
     </form>`
   renderToDom("#formContainer", domStringForm)
-  renderToDom("#flexCardContainer", '')
   renderToDom('#cardContainer', domString);
 }
 
@@ -180,9 +179,10 @@ const addRepo = function (){
 
 // //LAURA'S FUNCTION BELOW
 const projectDom = () =>{
-  let domString ="";
+  let domString =`<h1 id="cardTitle" class="project-board">Projects</h1>`
 for (const project of data[2].info){ 
-  domString += `<div class="card" id="user-card" style="width: 50rem;" >
+  domString += `
+  <div class="card" id="user-card">
         
       <div class="body">
       <h5 class="card-title">${project.projName}</h5>
@@ -205,10 +205,9 @@ let domStringForm=`
             </div>
             <textarea id="projectDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-warning" id="project">Create Project</button>
+          <button type="submit" class="formBtn btn btn-warning" id="project">Create Project</button>
     </form>`
   renderToDom("#formContainer", domStringForm)
-  renderToDom("#flexCardContainer", '')
   renderToDom ('#cardContainer', domString);
 }
 
@@ -228,7 +227,7 @@ const createProject = () => {
 
 // MASONS FUNCTION BELOW ****
 const renderPackages = () =>{
-  let domString=""
+  let domString=`<h1 id="cardTitle" class="project-board">Packages</h1><div class="flex-card">`
   data[3].info.forEach(item => {
     domString+=`
     <div class="card packages-cards";">
@@ -240,6 +239,7 @@ const renderPackages = () =>{
     </div>`
   
   });
+  domString+=`</div>`
   let domStringForm=`
   <h1>Add Package</h1>
     <form id="formPackage">
@@ -255,11 +255,10 @@ const renderPackages = () =>{
             </div>
             <textarea id="packageDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-warning" id="package">Add Package</button>
+          <button type="submit" class="formBtn btn btn-warning" id="package">Add Package</button>
     </form>`
   renderToDom("#formContainer", domStringForm)
-  renderToDom("#cardContainer", '')
-  renderToDom("#flexCardContainer", domString);
+  renderToDom("#cardContainer", domString)
 }
 
 const createPackage = () =>{
@@ -278,17 +277,17 @@ const createPackage = () =>{
 // DAVIDS FUNCTION BELOW ****
 
 const cardsOnDom = () => {
-  let domString = "";
+  let domString = `<h1 id="cardTitle" class="project-board">Pinned</h1><div class="flex-card">`;
   for (const cards of data[0].info) {
     domString += `
   <div class="overview-card card">
     <div class="card-body">
       <h5 class="card-title">${cards.title}</h5>
       <p class="card-text">${cards.description}</p>
-      <button class="btn btn-warning" id="delete--${cards.id}">Remove Project</button>
     </div>
   </div>`;
   }
+  domString+=`</div>`
   let domStringFrom =`
   <h1>Pin Repo</h1>
     <form id="formPin">
@@ -304,11 +303,10 @@ const cardsOnDom = () => {
             </div>
             <textarea id="pinDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-warning" id="pin">Create Pin</button>
+          <button type="submit" class="formBtn btn btn-warning" id="pin">Create Pin</button>
     </form>`
   renderToDom("#formContainer", domStringFrom)
-  renderToDom("#cardContainer", '')
-  renderToDom("#flexCardContainer", domString);
+  renderToDom("#cardContainer", domString)
 };
 
 const createPin = () => {

@@ -5,7 +5,7 @@ const data = [
     info: [
       {
         id: 1,
-        title: "The Commit Commanders",
+        title: "The Commit Commandos",
         description: "Commanding code since April 2023.",
       },
       {
@@ -125,7 +125,7 @@ const repoDisplay = function (obj){ return `
   <h3 class="repo-title">${obj.name}</h3>
   <p class="repo-desc">${obj.desc}</p>
   <h5 class="repo-tags">${obj.tags}</h5>
-  <button class="repo-fav">* Star</button>
+  <button class="repo-fav">★</button>
   </li>`
 }
 
@@ -152,7 +152,7 @@ const rendRepo = function(){
             </div>
             <textarea id="repoDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="repo">Create Repo</button>
+          <button type="submit" class="btn btn-warning" id="repo">Create Repo</button>
     </form>`
   renderToDom("#formContainer", domStringForm)
   renderToDom('#cardContainer', domString);
@@ -204,7 +204,7 @@ let domStringForm=`
             </div>
             <textarea id="projectDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="project">Create Project</button>
+          <button type="submit" class="btn btn-warning" id="project">Create Project</button>
     </form>`
   renderToDom("#formContainer", domStringForm)
   renderToDom ('#cardContainer', domString);
@@ -233,7 +233,7 @@ const renderPackages = () =>{
       <div class="card-body">
         <h5 class="card-title">${item.name}</h5>
         <p class="card-text">${item.description}</p>
-        <a href="#" class="btn btn-primary">More info</a>
+        <a href="#" class="btn btn-warning">More info</a>
       </div>
     </div>`
   
@@ -253,7 +253,7 @@ const renderPackages = () =>{
             </div>
             <textarea id="packageDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="package">Add Package</button>
+          <button type="submit" class="btn btn-warning" id="package">Add Package</button>
     </form>`
   renderToDom("#formContainer", domStringForm)
   renderToDom("#cardContainer",domString)
@@ -291,7 +291,7 @@ const cardsOnDom = () => {
     <form id="formPin">
       <div class="mb-3">
             <div>
-              <label class="text-area-labels" for="projectName" class="form-name">Repo Name:</label>
+              <label class="text-area-labels" for="projectName" id="repoTitle: class="form-name">Repo Name:</label>
             </div>
             <textarea id="pinTitle" class="text-area" rows="1" cols="30" placeholder="Please enter a repo name.."></textarea>
             </div>
@@ -301,7 +301,7 @@ const cardsOnDom = () => {
             </div>
             <textarea id="pinDescription" class="text-area" rows="6" cols="30" placeholder="Please enter a description.."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="pin">Create Pin</button>
+          <button type="submit" class="btn btn-warning" id="pin">Create Pin</button>
     </form>`
     renderToDom("#formContainer", domStringFrom)
   renderToDom("#cardContainer", domString);
@@ -315,7 +315,7 @@ const createPin = () => {
     title: document.querySelector("#pinTitle").value,
     description: document.querySelector("#pinDescription").value
   }
-  data[0].info.unshift(newProject);
+  data[0].info.push(newProject);
   cardsOnDom();
   body.reset();
 };
